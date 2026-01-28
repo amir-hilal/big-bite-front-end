@@ -85,7 +85,7 @@ const Contact = () => {
                 <div className={styles.card}>
                   <h3 className={styles.cardTitle}>Service Areas</h3>
                   <p className={styles.hoursText}>
-                    Based in Myrtle Beach, we serve the greater coastal Carolina region. 
+                    Based in Myrtle Beach, we serve events throughout the Southeast states. 
                     Contact us to discuss your event location - we travel!
                   </p>
                 </div>
