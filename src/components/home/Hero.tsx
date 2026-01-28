@@ -20,16 +20,21 @@ const Hero = () => {
       <div className={`container ${styles.container}`}>
         <div className={styles.content}>
           <h1 className={styles.headline}>
-            Big Flavor. Big Portions. <span className={styles.highlight}>Big Bite.</span>
+            Big Flavor. Big Portions.{' '}
+            <span className={styles.highlight}>Big Bite.</span>
           </h1>
           <p className={styles.tagline}>
-            Festival-style fair food and street bites for fairs, festivals, and private events
+            Festival-style fair food and street bites for fairs, festivals, and
+            private events
           </p>
           <div className={styles.cta}>
             <button onClick={scrollToMenu} className={styles.primaryButton}>
               View Menu
             </button>
-            <button onClick={scrollToContact} className={styles.secondaryButton}>
+            <button
+              onClick={scrollToContact}
+              className={styles.secondaryButton}
+            >
               Contact Us
             </button>
           </div>
