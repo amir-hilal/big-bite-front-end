@@ -1,11 +1,18 @@
 import styles from './Gallery.module.css';
 
-// Placeholder gallery items - user can add actual stand images later
 const galleryItems = [
-  { id: 1, alt: 'Big Bite concession stand at festival' },
-  { id: 2, alt: 'Food preparation area' },
-  { id: 3, alt: 'Customers enjoying festival food' },
-  { id: 4, alt: 'Concession stand setup' },
+  {
+    id: 1,
+    src: '/gallery/stand-setup-front.png',
+    alt: 'Big Bite concession stand at festival',
+  },
+  {
+    id: 2,
+    src: '/gallery/stand-setup-side.png',
+    alt: 'Big Bite food stand setup',
+  },
+  { id: 3, alt: 'Photo coming soon' },
+  { id: 4, alt: 'Photo coming soon' },
 ];
 
 const Gallery = () => {
@@ -22,10 +29,19 @@ const Gallery = () => {
         <div className={styles.grid}>
           {galleryItems.map((item) => (
             <div key={item.id} className={styles.imageContainer}>
-              <div className={styles.placeholder}>
-                <span className={styles.icon}>📸</span>
-                <span className={styles.text}>Photo Coming Soon</span>
-              </div>
+              {item.src ? (
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  className={styles.image}
+                  loading="lazy"
+                />
+              ) : (
+                <div className={styles.placeholder}>
+                  <span className={styles.icon}>📸</span>
+                  <span className={styles.text}>Photo Coming Soon</span>
+                </div>
+              )}
             </div>
           ))}
         </div>
